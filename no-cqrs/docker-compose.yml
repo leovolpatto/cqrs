@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  postgres:
+    container_name: "no_cqrs_pgsql"
+    image: postgres:12.4-alpine
+    environment:
+      LANG: "pt_BR.utf8"
+      POSTGRES_USER: nocqrs
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nocqrs
+    ports:
+      - "5454:5432"
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge

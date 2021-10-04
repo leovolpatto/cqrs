@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+  postgres:
+    container_name: "CQRS_Postgresql"
+    image: postgres:12.4-alpine
+    environment:
+      LANG: "pt_BR.utf8"
+      POSTGRES_USER: cqrs
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: cqrs
+    ports:
+      - "5442:5432"
+
+  rabbitmq:
+    container_name: "CQRS_RabbitMQ"
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "25676:25676"
+      
+  dynamodb:
+    container_name: "CQRS_DynamoDB"
+    image: amazon/dynamodb-local
+    hostname: dynamodb-local
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+
+  redis:
+    container_name: "CQRS_Redis"
+    image: redis:alpine
+    ports:
+      - "6379"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 1s
+      restart_policy:
+        condition: on-failure
