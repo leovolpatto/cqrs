@@ -4,3 +4,7 @@ Neste repo temos uma aplicação para computar votos. Esta aplicação pode faze
 
 - Sem CQRS - com o intuito de mostrar possíveis impactos na leitura dos votos computados
 - Com CQRS - com o intuito de mostrar como funciona na prática e como o CQRS pode ser uma boa solução para determinados problemas de leitura/escrita
+
+
+
+Sample projects done by me and Thiago Coradi Garcial Leal
