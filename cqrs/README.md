@@ -5,7 +5,7 @@ Simple API built using ASP.NET Core and MediatR to demonstrate how to easily imp
 The example API is very simple, exposing HTTP endpoints through `/api/Votos` that internally use MediatR to handle requests and responses.
 
 ## Frameworks and Libraries
-- [ASP.NET Core 2.2](https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-2.2);
+- [ASP.NET Core 5.0](https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-5.0);
 - [MediatR](https://github.com/jbogard/MediatR) (mediator pattern implementation for .NET);
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) (for data access);
 - [Entity Framework In-Memory Provider](https://docs.microsoft.com/en-us/ef/core/miscellaneous/testing/in-memory) (for testing purposes);
